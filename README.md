@@ -50,6 +50,24 @@ Ci sarà una ulteriore raccolta dati per i seguenti campi:
 > rappresenta un obiettivo, qual'ora si completassero tutte le task l'obiettivo sarebbe portato a termine. Così da poter creare un manager per
 > il tracciamento delle task svolte e obiettivi raggiunti.
 
+**RIASSUNTO DEI DATI DA MEMORIZZARE**
+
+| DATO  | TIPO |
+|-------|------|
+| Tempo totale di concentrazione  | Numerico intero  
+| Tempo totale di pausa  | Numerico intero  
+| Numero totale di stint completati | Numerico intero  
+| Numero totale di cicli completati | Numerico intero 
+| I relativi giorni in cui è stato completato uno (o più) stint/cicl* | Stringa + Contatore
+| L'orario in cui è stato avviato uno stint | Time format **hh:mm**
+| Numero di minuti per la messa in pausa della sessione di concentrazione | Numerico intero
+| Numero di pause saltate | Numerico intero
+| Numero dei minuti delle pause saltate | Numerico intero
+| Numeno di minuti per le pause allungate | Numerico intero
+| Feedback da parte dell'utente. Per maggiori info vedi [Feedback e distrazione](#6-feedback-e-distrazione) | String + Contatore
+
+Per la relazione e l'incrocio di dati sarà necessario implementare un sistema di storaging maggiore.
+
 ### 3. Smart break
 
 Nella fase di pausa verranno implementati dei suggerimenti su tecniche di respirazione, metodi per il rilassamento mentale e muscolare, meditazione oppure delle frasi motivazoinali
