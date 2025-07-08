@@ -18,7 +18,7 @@ Fornire la possibilità di personalizzare completamente le sessioni di concentra
 > [!NOTE]
 > Per **stint** intendiamo il tempo che comprende il periodo di concentrazione più il periodo di pausa (NeuroBurst + NeuroPause)
 >
-> Per **ciclo** intendiamo l'intero ciclo di sessione che comprende 4 stint, con l'ultimo stin con periodo di pausa maggiore.
+> Per **ciclo** intendiamo l'intero ciclo di sessione che comprende l'insieme degli stint.
 
 Tutte queste personalizzazioni dovranno essere salvate in modo che l'utente possa avviarle, modificarle o eliminarle.
 
@@ -27,16 +27,23 @@ Tutte queste personalizzazioni dovranno essere salvate in modo che l'utente poss
 Analizzare dati creando grafici giornalieri, settimanali e mensili con dei report che indichino:
 
 - il tempo totale in concentrazione
-- in pausa 
+- in pausa
 - quanti stint sono stati completati
 - quanti cicli sono stati completati
+- quali sono i giorni in cui è stato utilizzato il software
+- a che ora è stato utilizzato
 
 L'aggiunta delle seguenti funzionalità per migliorare ulteriormente l'esperienza utente:
+
 1. Avere la possibilità di taggare ogni ciclo con il tipo di attività svolta.
 2. Fornire una timeline per vedere in quali giorni e orari hai completato più task o l'utente è riuscito a completare più stint o cicli.
 3. Creare una lista di minacce per l'attenzione personalizzabili dall'utente con dei reminder all'inizio degli stint. Ad esempio "Ricordami di togliere il telefono dalla portata di mano"
 4. L'utente potrà fermare la sessione di concentrazione o di pausa, saltare la pausa o prolungarla.
 
+Ci sarà una ulteriore raccolta dati per i seguenti campi:
+-  numero di minuti della sessione di concentrazione messa in pausa
+-  numero di pause saltate e minuti relativi saltati
+-  numero di minuti per le pause allungate
 
 > [!TIP]
 > Eventualmente pensare di integrare una semplice todo list, con elenco delle task da svolgere con relative scadenze (*implementare i reminder*) e l'insieme delle task di una stessa categoria
@@ -56,6 +63,6 @@ Possibilità di bloccare notifiche da siti e app *solo* durante i periodi di con
 
 Poter lanciare l'app su diversi dispositivi condividendo gli stessi dati e aggiornandoli separatamente.
 
-### 6. Feedback
+### 6. Feedback e distrazione
 
-### NeuroAdaptive AI
+### 7. NeuroAdaptive AI
