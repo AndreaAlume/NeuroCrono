@@ -31,6 +31,7 @@ Analizzare dati creando grafici giornalieri, settimanali e mensili con dei repor
 - quanti stint sono stati completati
 - quanti cicli sono stati completati
 
+L'aggiunta delle seguenti funzionalità per migliorare ulteriormente l'esperienza utente:
 1. Avere la possibilità di taggare ogni ciclo con il tipo di attività svolta.
 2. Fornire una timeline per vedere in quali giorni e orari hai completato più task o l'utente è riuscito a completare più stint o cicli.
 3. Creare una lista di minacce per l'attenzione personalizzabili dall'utente con dei reminder all'inizio degli stint. Ad esempio "Ricordami di togliere il telefono dalla portata di mano"
