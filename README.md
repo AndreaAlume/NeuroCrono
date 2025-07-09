@@ -2,18 +2,22 @@
 
 ## Analisi delle funzionalità 
 
-### 1. Modalità flusso
+### 1. Cronometro intelligente
 
-Stabilire la modalità di default secondo la teoria del pomodoro (ovvero 25 minuti di concentrazione seguiti da 5 minuti di pausa e ogni due ore ovvero 3 stint la pausa sarà di 20 minuti), avendo così la modalità **NeuroFlow Session** con:
+Questà sarà la funzionalità cardine del software con cui l'utente potrà direttamente interagire. Sostanzialmente sarà un cronometro programmabile sia per i momenti di concentrazione sia per i momenti di pausa, questo software si basa sulla teoria del pomodoro (25 +5).
 
-- NeuroBurst: della durata di 25 minuti per la concentrazione
-- NeuroPause: della durata di 5 minuti di pausa
+Verrà stabilità una modalità di default, chiamate **NeuroFlow Session**, con:
 
-Fornire la possibilità di personalizzare completamente le sessioni di concentrazioni e le sessioni di pausa, con la possibilità di decidere quanti stint dovrà avere un ciclo.
+- **NeuroBurst**: della durata di 25 minuti per la concentrazione
+- **NeuroPause**: della durata di 5 minuti di pausa
+
+Verra inoltre fornita la possibilità di **aggiungere e personalizzare** completamente le sessioni di concentrazioni e le sessioni di pausa, con la possibilità di decidere quanti stint dovrà avere un ciclo.
 
 > Ad esempio voglio modificare gli stint con 20 minuti di concentrazione e 10 minuti di pausa e ogni 3 stint aumentare la pausa di altri 10 minuti.
 
 > Oppure voglio che abbia un unico ciclo composto da 50 minuti per la concentrazione e 10 minuti di pausa.
+
+- L'utente dovrà avere anche la possibilità di mettere in pausa o annullare sia le sessioni di concentrazione sia quelle di pausa.
 
 > [!NOTE]
 > Per **stint** intendiamo il tempo che comprende il periodo di concentrazione più il periodo di pausa (NeuroBurst + NeuroPause)
@@ -54,19 +58,22 @@ Ci sarà una ulteriore raccolta dati per i seguenti campi:
 
 | DATO  | TIPO |
 |-------|------|
-| Tempo totale di concentrazione  | Numerico intero  
-| Tempo totale di pausa  | Numerico intero  
-| Numero totale di stint completati | Numerico intero  
-| Numero totale di cicli completati | Numerico intero 
+| Tempo totale di concentrazione  | Numerico intero 
+| Tempo totale di pausa  | Numerico intero
+| Numero totale di stint completati | Numerico intero 
+| Numero totale di cicli completati | Numerico intero
 | I relativi giorni in cui è stato completato uno (o più) stint/cicl* | Stringa + Contatore
-| L'orario in cui è stato avviato uno stint | Time format **hh:mm**
-| Numero di minuti per la messa in pausa della sessione di concentrazione | Numerico intero
-| Numero di pause saltate | Numerico intero
-| Numero dei minuti delle pause saltate | Numerico intero
-| Numeno di minuti per le pause allungate | Numerico intero
+| Gli orari in cui è stato *avviato* e *terminato* uno stint | Time format **hh:mm**
+| Gli orari in cui è stato *avviato* e *terminato* un ciclo | Time format **hh:mm**
+| Numero di minuti per la messa in pausa della sessione di concentrazione[^1] | Numerico intero
+| Numero di pause saltate[^2] | Numerico intero
+| Numero dei minuti delle pause saltate[^2] | Numerico intero
+| Numeno di minuti per le pause allungate[^2] | Numerico intero
 | Feedback da parte dell'utente. Per maggiori info vedi [Feedback e distrazione](#6-feedback-e-distrazione) | String + Contatore
 
-Per la relazione e l'incrocio di dati sarà necessario implementare un sistema di storaging maggiore.
+[^1]: Questo dato verrà sommato per semplicità con il numero di minuti totale delle pause
+
+[^2]: Questi dati saranno utili per capire quali pause sono state saltate o quali sono state allungate al fine di allenare [NeuroAdaptive](#7-neuroadaptive-ai) per fornire consigli sempre più veritieri e attendibili.
 
 ### 3. Smart break
 
@@ -83,4 +90,35 @@ Poter lanciare l'app su diversi dispositivi condividendo gli stessi dati e aggio
 
 ### 6. Feedback e distrazione
 
+Verranno poste delle domande all'utente per capire qual'è stato il suo grado di concentrazione, se si è distratto e se risponde affermativamente quante volte, se alla fine del ciclo è stanco oppure se prima della fine di un ciclo era già stanco.
+
+In base alle risposte verrà allenata una mini AI per fornire consigli automatici in base alle risposte date e ai dati precendenti analizzati.
+
+> Se ad esempio l'AI analizza e riscontra che il lunedì alla stessa ora con lo stesso meotodo l'utente avverte stanchezza informa l'utente e fornisce dei suggerimenti.
+
 ### 7. NeuroAdaptive AI
+
+### 8. Task manager
+
+Creando una sezione a parte per la creazione di tasks e goals fornendo la possibilità di:
+
+> [!INFO]
+> Per **task** intendiamo una singola azione da completare.
+>
+> Mentre per **goal** intendiamo l'insieme di delle task accomunate da un intento o fissate per il raggiungimento di un obiettivo.
+
+> Facciamo un esempio: devo studiare più argomenti per una stessa materia, in questo caso il goal sarebbe "passare l'esame di matematica" e le task sarebbero gli argomenti da studiare "ricerca operativa" - "storia della ricerca operativa" - "eccetera".
+
+L'utente sarà dunque in grado di:
+
+- creare nuove task / goal
+- modificarl*
+- eliminarl*
+- flaggarle le task completate
+- deflaggare le task
+
+Quando le task verranno completate verrà fatto in modo che l'utente capisca che quel goal è stati completato e può eliminarlo.
+
+L'utente potrà iniziare un ciclo direttamnte dalla task scelta o dal goal, avendo la scelta di flaggare le task o il goal se è riuscito effettivamente a completarle. 
+
+Verrano fornite ulteriori informazioni come ad esempio quante ore l'utente ha impiegato per completare una task e il tempo totale che ha impiegato per completare un goal che sarà la somma dei minuti delle varie task.
