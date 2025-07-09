@@ -102,7 +102,7 @@ In base alle risposte verrà allenata una mini AI per fornire consigli automatic
 
 Creando una sezione a parte per la creazione di tasks e goals fornendo la possibilità di:
 
-> [!INFO]
+> [!NOTE]
 > Per **task** intendiamo una singola azione da completare.
 >
 > Mentre per **goal** intendiamo l'insieme di delle task accomunate da un intento o fissate per il raggiungimento di un obiettivo.
